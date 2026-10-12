@@ -1,66 +1,74 @@
-# Starkojak — Design Notes
+# Starkojak — design plan
 
-The site is an old, leather-bound field journal lying open on a dark walnut desk,
-lit by a single warm lamp from the upper left. Follow these decisions in future work.
+A single vertical page that reads like a four-page chapter of a quiet seinen manga,
+printed on cheap off-white stock. Not a pop-art comic: no Ben-Day explosions, no
+yellow caption boxes, no tilted "POW" panels. The tone is dry and still; the page
+breathes through its margins.
 
-## Language
-- All site copy is **English** (`<html lang="en">`): headings, buttons, aria-labels, placeholder text.
-- Placeholder copy is short, plain and book-toned. No lorem ipsum.
+## What keeps it from looking like every comic site
 
-## Palette
-| Name          | Hex       | Role |
-|---------------|-----------|------|
-| Iron-gall Ink | `#2A1E16` | Body text, ink drawings |
-| Vellum        | `#E6D5B0` | Paper base (fallback before textures render) |
-| Foxing        | `#9A6A36` | Stains, scorched edges, folios, rules |
-| Oxblood       | `#4B1A16` | Leather cover and boards |
-| Gilt          | `#C8A04A` | Cover tooling, focus rings, UI on the desk |
-| Walnut Night  | `#140D08` | Desk / page background |
-| Rubric        | `#8E2B1D` | Drop caps only (medieval rubrication) — use sparingly |
+- **Printed-volume furniture.** Each page is a sheet with a vertical chapter tab in
+  the outer margin (like a tankōbon thumb index) and a small page number (nombre)
+  at the foot. On phones the tab lies flat above the title.
+- **Fine screentone, not big dots.** Halftone is a 5px dot grid that fades out
+  (CSS radial-gradient + mask), used sparingly: behind the title shadow and in one
+  "quiet" panel that holds the balloon.
+- **Irregular gutters.** Rows are separated by wider gutters than columns, and one
+  gutter runs on a diagonal. Speech balloons break panel borders.
+- **Colour discipline.** Vermilion appears only where the art already has it (the
+  arrows) and on exactly one button: the Avnu swap button on page 3.
 
-## Typography
-| Role | Font | Notes |
-|------|------|-------|
-| Display: cover title, page titles, folios | **Cormorant SC** 600/700 | Crisp engraved capitals; gilt on the cover |
-| Body text | **IM Fell English** (+ italic) | Real letterpress irregularity reads as ink on paper |
-| Handwritten notes, captions, hint | **La Belle Aurore** | Quill-pen cursive; only for short notes (≥ 1.2em) |
+## Colours
 
-- Line length ≤ 62ch (hard cap 70). Body line-height 1.55.
-- Type scales with the page via container units (`cqw`), with a 13.5px floor for phones.
+| Token        | Hex       | Use                                                       |
+|--------------|-----------|-----------------------------------------------------------|
+| `--sumi`     | `#15130f` | Ink: panel borders, text, balloon strokes                 |
+| `--paper`    | `#e7ddd0` | Page ground, measured from the art (mean of paper pixels) |
+| `--white-out`| `#f5f0e7` | Inside balloons and caption boxes (correction-fluid white)|
+| `--tone-30`  | `#b9b0a3` | Light screentone, hairlines                               |
+| `--tone-60`  | `#6e675e` | Secondary text, page numbers                              |
+| `--vermilion`| `#e2501b` | Measured from the arrows. Avnu button only.               |
 
-## Light & depth
-- One light source: warm, upper-left. Highlights fall top-left, shadows fall bottom-right — everywhere.
-- Book tilted `rotateX(7deg)` in perspective on desktop; flat on phones.
-- Page-block thickness on each side tracks reading progress.
-- Gutter shadow lives inside each page so it turns with the page.
+## Type
 
-## Layers (bottom → top)
-1. Procedural walnut desk (SVG feTurbulence rendered once to WebP)
-2. Lamp pool + vignette (CSS gradients)
-3. Book contact shadow
-4. Leather boards (front/back cover edges)
-5. Page stacks (striped edges)
-6. StPageFlip pages (paper textures, ink, content)
-7. Lighting overlay on the book (highlight + shade)
-8. Dust motes canvas (off with `prefers-reduced-motion`)
+- **Dela Gothic One** — title and chapter tabs. A heavy Japanese gothic with
+  blunt corners: reads as an effect/title face, not a web font.
+- **Comic Neue** (400/700) — balloons, captions, UI. Upright, round, hand-lettered.
+- System monospace — contract address only.
 
-## Paper
-- Each page gets its own seeded texture: surface undulation (diffuse lighting), fibres, grain,
-  foxing blotches, speckles, ink/coffee drops, scorched edges, deckled edge; some pages torn.
-- Textures are rendered once to compressed WebP blobs, never re-filtered per frame.
+## Page 1 layout
 
-## Decisions that replaced defaults
-- IM Fell for headings (the "every old-book site" choice) → moved to body text; titles use Cormorant SC.
-- Caveat (modern marker) → La Belle Aurore (quill).
-- Brown leather → oxblood.
-- Flat beige gradient paper → per-page procedural textures with different stain patterns.
-- All-brown palette → rubric red reserved for drop caps.
+Desktop (sheet max ~1040px, 12 columns; row gutter 28px, column gutter 14px)
 
-## Boldness budget
-- Spend it on the opening moment (closed gilt book → 3D cover opening) and the page turn.
-- Everything else stays calm: no hover effects except the two nav buttons, no extra ornaments.
+```
+ ┌──┐
+ │C │  STARKOJAK                      ← Dela Gothic, huge, halftone drop shadow
+ │H │  A meme coin on Starknet.
+ │1 │ ┌──────────────────────────────────────────────┐
+ │  │ │▌Somewhere above the bay.                     │
+ │  │ │            p1-wide  (3:2, full width)        │
+ └──┘ └──────────────────────────────────────────────┘
+      ┌───────────────────────────┐ ┌────────────────┐
+      │                           │ │ ░░░░░░░░░░░░░░ │
+      │                           │◄──( I just woke ) │  balloon breaks the border,
+      │      p1-face  (2:3)       │ │ ░( up from a  ) │  tail points at the face
+      │      7 columns            │ │ ░░(  dream.  )░ │
+      │      the big moment       │ │ ░░░░░░░░░░░░░░ ╱
+      │                           │ ╱───────────────╱  ← diagonal gutter
+      │                           │ │   p1-star     │
+      │                           │ │   (1:1)       │
+      └───────────────────────────┘ └────────────────┘
+                                                  1
+```
 
-## Content
-- All text lives in `content.js`. Page types: `contents`, `text`, `drawing`, `photo`, `list`, `notes`, `contact`.
-- Ink drawings (star chart, castle, compass rose) are original SVG in `art.js`.
-- `photo: ""` renders a generated sepia placeholder; set it to an image path to use a real photo.
+Phone (390px): one column in reading order — tab, title, p1-wide, p1-face,
+balloon panel (tail points up into the face), p1-star.
+
+Pages 2–4 follow the same sheet system (to be built after approval).
+
+## Motion
+
+Panels snap into place once as they scroll in: a 220ms drop from 1.03 scale,
+staggered ~90ms. The face panel on page 1 is the only big moment: a heavier slam,
+then the balloon pops. Everything else is still. `prefers-reduced-motion` and
+no-JS both show the final state with no animation.
