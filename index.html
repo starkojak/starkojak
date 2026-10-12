@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Starkojak</title>
+  <meta name="description" content="Starkojak — eski bir kitabın sayfalarında proje tanıtımı.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="desk">
+    <div class="book-wrap">
+      <div id="book"></div>
+    </div>
+
+    <nav class="controls" aria-label="Sayfa gezinme">
+      <button id="prev" type="button" aria-label="Önceki sayfa">&#8592;</button>
+      <span id="page-info">1 / 6</span>
+      <button id="next" type="button" aria-label="Sonraki sayfa">&#8594;</button>
+    </nav>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/page-flip@2.0.7/dist/js/page-flip.browser.js"></script>
+  <script src="content.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
