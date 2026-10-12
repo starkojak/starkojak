@@ -1,57 +1,116 @@
 /*
- * KİTAP İÇERİĞİ
- * Sayfa metinlerini buradan değiştirin. Her nesne bir sayfadır.
- *   title : sayfa başlığı (boş bırakılabilir)
- *   body  : paragraflar listesi (her satır bir paragraf)
- *   quote : (isteğe bağlı) sayfanın altında görünen alıntı
- * Sayfa eklemek/çıkarmak için listeye nesne ekleyip silmeniz yeterli.
- * Not: Çift sayıda sayfa en düzgün görünümü verir.
+ * BOOK CONTENT
+ * Edit the text of the book here. Nothing else needs to change.
+ *
+ * Page types:
+ *   contents : table of contents  — entries: [{ label, page }]  (page = inner page number)
+ *   text     : prose page         — paragraphs, optional drawing ("starChart" | "castle" | "compass"), note
+ *   drawing  : illustration page  — drawing, caption, notes (handwritten)
+ *   photo    : pasted photograph  — photo (image path, or "" for a generated placeholder), caption
+ *   list     : list page          — intro, items, optional drawing
+ *   notes    : handwritten page   — paragraphs, lines (handwritten)
+ *   contact  : correspondence     — paragraphs, links: [{ label, value, href }], signature
+ *
+ * Keep each page short: it has to fit on one page of the book, also on phones.
+ * The book needs exactly 8 inner pages to close neatly on its back cover.
  */
-const BOOK_CONTENT = [
-  {
+const BOOK = {
+  cover: {
     title: "Starkojak",
-    body: [
-      "Bu kitap, Starkojak projesinin hikâyesini anlatır.",
-      "Sayfayı çevirmek için sağ sayfaya tıklayın ya da köşesinden tutup sürükleyin."
-    ],
-    quote: "— Birinci Cilt —"
+    subtitle: "Being a Record of the Work",
+    volume: "Volume I",
+    hint: "Click the cover to open"
   },
-  {
-    title: "Önsöz",
-    body: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-    ]
+
+  backCover: {
+    motto: "Finis"
   },
-  {
-    title: "Fikir",
-    body: [
-      "Her şey küçük bir fikirle başladı. Buraya projenin neden doğduğunu anlatan birkaç cümle gelecek.",
-      "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
-    ]
-  },
-  {
-    title: "Yolculuk",
-    body: [
-      "Bu bölümde projenin geçtiği aşamalar, karşılaşılan zorluklar ve çözümler yer alacak.",
-      "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-    ],
-    quote: "“Bin millik yolculuk tek bir adımla başlar.”"
-  },
-  {
-    title: "Özellikler",
-    body: [
-      "• Birinci özellik hakkında kısa bir açıklama.",
-      "• İkinci özellik hakkında kısa bir açıklama.",
-      "• Üçüncü özellik hakkında kısa bir açıklama."
-    ]
-  },
-  {
-    title: "Son Söz",
-    body: [
-      "Okuduğunuz için teşekkürler. İletişim bilgileri ve bağlantılar bu sayfaya eklenecek.",
-      "github.com/starkojak"
-    ],
-    quote: "— Son —"
-  }
-];
+
+  pages: [
+    {
+      type: "contents",
+      title: "Contents",
+      entries: [
+        { label: "Preface", page: 2 },
+        { label: "A Chart of the Sky", page: 3 },
+        { label: "The Road So Far", page: 4 },
+        { label: "From the Archive", page: 5 },
+        { label: "What Lies Within", page: 6 },
+        { label: "Margin Notes", page: 7 },
+        { label: "Correspondence", page: 8 }
+      ],
+      note: "Begin anywhere. The pages will forgive you."
+    },
+    {
+      type: "text",
+      title: "Preface",
+      paragraphs: [
+        "This book keeps the story of Starkojak: how it began, what it has become, and where it means to go next. It is written plainly, for anyone who happens to wander in.",
+        "Each page holds one part of the tale. Read them in order, or open at random. The work was never built in a straight line either."
+      ],
+      note: "Begun on a rainy evening. Still unfinished."
+    },
+    {
+      type: "drawing",
+      title: "A Chart of the Sky",
+      drawing: "starChart",
+      caption: "Fig. I. The first map: every idea plotted, most of them never visited.",
+      notes: ["the bright one is the idea that stuck", "north is wherever the work points"]
+    },
+    {
+      type: "text",
+      title: "The Road So Far",
+      paragraphs: [
+        "It started as a small experiment, the kind one abandons by the weekend. It was not abandoned.",
+        "There were wrong turns and long nights, and a few mornings when everything simply worked. Each of them left a mark on these pages."
+      ],
+      drawing: "castle",
+      note: "the keep we set out to build"
+    },
+    {
+      type: "photo",
+      title: "From the Archive",
+      photo: "",
+      caption: "The first day, more or less. Paste your own photograph here."
+    },
+    {
+      type: "list",
+      title: "What Lies Within",
+      intro: "Four promises, kept as well as we are able:",
+      items: [
+        "A clear purpose: one problem, solved with care.",
+        "Sturdy foundations, built to outlast the first version.",
+        "An open door. Anyone may read, borrow and improve.",
+        "A steady hand. Maintained, not merely launched."
+      ],
+      drawing: "compass"
+    },
+    {
+      type: "notes",
+      title: "Margin Notes",
+      paragraphs: [
+        "A working book keeps one page for unfinished thoughts. This is that page."
+      ],
+      lines: [
+        "Still to do:",
+        "finish the second chapter",
+        "draw a better map",
+        "ask for honest feedback",
+        "keep the pages turning"
+      ]
+    },
+    {
+      type: "contact",
+      title: "Correspondence",
+      paragraphs: [
+        "Letters, questions and kind words are always welcome. Write by any of the roads below."
+      ],
+      links: [
+        { label: "GitHub", value: "github.com/starkojak", href: "https://github.com/starkojak" },
+        { label: "Website", value: "starkojak.vercel.app", href: "https://starkojak.vercel.app" },
+        { label: "Post", value: "your@email.here", href: "" }
+      ],
+      signature: "Yours, in ink — Starkojak"
+    }
+  ]
+};

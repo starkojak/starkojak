@@ -1,30 +1,50 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Starkojak</title>
-  <meta name="description" content="Starkojak — eski bir kitabın sayfalarında proje tanıtımı.">
+  <meta name="description" content="Starkojak — the story of the work, kept in an old leather-bound journal.">
+  <meta name="theme-color" content="#140D08">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Crect width=%2232%22 height=%2232%22 rx=%225%22 fill=%22%234B1A16%22/%3E%3Cpath d=%22M16 5l2.5 8.5L27 16l-8.5 2.5L16 27l-2.5-8.5L5 16l8.5-2.5z%22 fill=%22%23C8A04A%22/%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@500;600;700&family=IM+Fell+English:ital@0;1&family=La+Belle+Aurore&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main class="desk">
-    <div class="book-wrap">
-      <div id="book"></div>
+  <div class="lamp" aria-hidden="true"></div>
+
+  <main class="scene">
+    <h1 class="visually-hidden">Starkojak</h1>
+    <div class="stage-wrap">
+      <div class="book-stage is-front" id="stage" tabindex="0"
+           aria-label="The Starkojak book. Press Enter or the arrow keys to turn the pages.">
+        <div class="book-shadow" aria-hidden="true"></div>
+        <div class="board board--left" aria-hidden="true"></div>
+        <div class="board board--right" aria-hidden="true"></div>
+        <div class="stack stack--left" aria-hidden="true"></div>
+        <div class="stack stack--right" aria-hidden="true"></div>
+        <div id="book"></div>
+        <div class="book-light" aria-hidden="true"></div>
+      </div>
     </div>
 
-    <nav class="controls" aria-label="Sayfa gezinme">
-      <button id="prev" type="button" aria-label="Önceki sayfa">&#8592;</button>
-      <span id="page-info">1 / 6</span>
-      <button id="next" type="button" aria-label="Sonraki sayfa">&#8594;</button>
+    <p class="hint" id="hint"></p>
+
+    <nav class="controls" aria-label="Page navigation">
+      <button id="prev" type="button" aria-label="Previous page">&#8249;</button>
+      <span id="page-info" aria-live="polite">Cover</span>
+      <button id="next" type="button" aria-label="Next page">&#8250;</button>
     </nav>
   </main>
 
+  <canvas id="dust" aria-hidden="true"></canvas>
+  <div class="vignette" aria-hidden="true"></div>
+
   <script src="https://cdn.jsdelivr.net/npm/page-flip@2.0.7/dist/js/page-flip.browser.js"></script>
   <script src="content.js"></script>
+  <script src="art.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
