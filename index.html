@@ -6,14 +6,17 @@
   <title>Starkojak — a meme coin on Starknet</title>
   <meta name="description" content="Starkojak is a meme coin on Starknet, told as a short manga chapter.">
   <meta name="theme-color" content="#e7ddd0">
+  <link rel="canonical" href="https://starkojak.vercel.app/">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://starkojak.vercel.app/">
   <meta property="og:title" content="Starkojak">
   <meta property="og:description" content="A meme coin on Starknet.">
-  <meta property="og:image" content="/assets/og-image.jpg">
+  <meta property="og:image" content="https://starkojak.vercel.app/assets/og-image.jpg">
   <meta property="og:image:width" content="1024">
   <meta property="og:image:height" content="1536">
   <meta property="og:image:alt" content="Starkojak, eyes closed, a four-pointed star on the head.">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://starkojak.vercel.app/assets/og-image.jpg">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -68,10 +71,109 @@
       <p class="sheet__nombre" aria-hidden="true">1</p>
     </article>
 
-    <!-- PAGES 2–4: placeholders, built after approval -->
-    <article class="sheet sheet--todo" id="chapter-2" hidden></article>
-    <article class="sheet sheet--todo" id="chapter-3" hidden></article>
-    <article class="sheet sheet--todo" id="chapter-4" hidden></article>
+    <!-- PAGE 2 -->
+    <article class="sheet sheet--calm" id="chapter-2" aria-labelledby="ch2-label">
+      <p class="sheet__tab" id="ch2-label">Chapter 2: The Quiet Part</p>
+
+      <div class="grid grid--p2">
+        <figure class="panel panel--p2a snap">
+          <img src="assets/p2-a.webp" width="1536" height="1024" loading="lazy" decoding="async"
+               alt="Starkojak, small and seen from behind, sitting on a rock ledge above the bay as the sun sets.">
+          <figcaption class="caption caption--tl">Starkojak sat at the edge and waited for nothing in particular.</figcaption>
+        </figure>
+
+        <figure class="panel panel--p2b snap">
+          <img src="assets/p2-b.webp" width="1254" height="1254" loading="lazy" decoding="async"
+               alt="Starkojak lying low, one eye half open, watching a tiny orange arrow push up through the soil.">
+          <figcaption class="caption caption--br">Something small came up out of the ground.</figcaption>
+        </figure>
+
+        <figure class="panel panel--p2c snap">
+          <img src="assets/p2-c.webp" width="1024" height="1536" loading="lazy" decoding="async"
+               alt="Starkojak asleep in the foreground while dozens of orange arrows stand on the hill behind.">
+          <figcaption class="caption caption--tl">More followed. Starkojak went back to sleep.</figcaption>
+        </figure>
+
+        <figure class="panel panel--p2d snap">
+          <img src="assets/p2-d.webp" width="1536" height="1024" loading="lazy" decoding="async"
+               alt="Starkojak sitting cross-legged, eyes closed, in a field of orange arrows that runs to the horizon.">
+          <p class="balloon balloon--p2d">Is this still the dream?<svg class="balloon__tail" viewBox="0 0 60 40" aria-hidden="true"><path d="M64 3 Q30 20 2 38 Q36 30 64 27 Z" fill="#f5f0e7"/><path d="M58 4 Q30 20 2 38 Q36 30 58 27" fill="none" stroke="#15130f" stroke-width="2.5" stroke-linejoin="round"/></svg></p>
+        </figure>
+      </div>
+
+      <p class="sheet__nombre" aria-hidden="true">2</p>
+    </article>
+
+    <!-- PAGE 3 -->
+    <article class="sheet" id="chapter-3" aria-labelledby="ch3-label">
+      <p class="sheet__tab" id="ch3-label">Chapter 3: Finding Starkojak</p>
+
+      <div class="grid grid--p3">
+        <figure class="panel panel--step panel--p3a snap">
+          <img src="assets/p3-a.webp" width="1254" height="1254" loading="lazy" decoding="async"
+               alt="Starkojak looking down at a small black wallet held in both hands.">
+          <figcaption class="band">1. Get a Starknet wallet.</figcaption>
+        </figure>
+
+        <figure class="panel panel--step panel--p3b snap">
+          <img src="assets/p3-b.webp" width="1536" height="1024" loading="lazy" decoding="async"
+               alt="A finger resting on one of two coins, with curved arrows between them showing a swap.">
+          <figcaption class="band">2. Get some STRK and swap it on Avnu.</figcaption>
+        </figure>
+
+        <a class="btn btn--avnu snap" href="https://app.avnu.fi/en?sellToken=strk&amp;buyToken=starkojak" target="_blank" rel="noopener">Buy on Avnu</a>
+
+        <figure class="panel panel--step panel--p3c snap">
+          <img src="assets/p3-c.webp" width="1254" height="1254" loading="lazy" decoding="async"
+               alt="Starkojak, eyes closed and smiling, holding up a coin with a four-pointed star on it.">
+          <figcaption class="band">3. Receive Starkojak.</figcaption>
+        </figure>
+
+        <section class="ca snap" aria-labelledby="ca-label">
+          <h2 class="ca__label" id="ca-label">Contract address</h2>
+          <div class="ca__row">
+            <code class="ca__value">
+              <span class="ca__full" data-ca></span>
+              <span class="ca__short" data-ca-short aria-hidden="true"></span>
+            </code>
+            <button class="btn btn--copy" type="button" data-copy>Copy</button>
+          </div>
+          <p class="ca__note">Always check the contract address before you swap.</p>
+          <p class="visually-hidden" aria-live="polite" data-copy-status></p>
+        </section>
+      </div>
+
+      <p class="sheet__nombre" aria-hidden="true">3</p>
+    </article>
+
+    <!-- PAGE 4 -->
+    <article class="sheet sheet--final" id="chapter-4" aria-labelledby="ch4-label">
+      <p class="sheet__tab" id="ch4-label">Final Chapter</p>
+
+      <div class="grid grid--p4">
+        <figure class="panel panel--p4a snap">
+          <img src="assets/p4-a.webp" width="1536" height="1024" loading="lazy" decoding="async"
+               alt="A crowd of round-headed figures with stars on their heads, seen from behind, facing a large setting sun over the sea.">
+          <figcaption class="caption caption--tl">More showed up.</figcaption>
+        </figure>
+
+        <figure class="panel panel--p4b cut-right snap">
+          <img src="assets/p4-b.webp" width="958" height="1478" loading="lazy" decoding="async"
+               alt="Starkojak glancing sideways with one eye open, orange arrows and the bay behind.">
+        </figure>
+
+        <div class="panel panel--end cut-left snap">
+          <p class="end__line">To be continued.</p>
+          <a class="btn btn--x" href="https://x.com/Starkojak" target="_blank" rel="noopener">Follow on X</a>
+        </div>
+      </div>
+
+      <div class="fin" aria-hidden="true">
+        <svg viewBox="0 0 32 32" width="22" height="22"><path d="M16 1Q18 14 31 16Q18 18 16 31Q14 18 1 16Q14 14 16 1Z" fill="currentColor"/></svg>
+      </div>
+
+      <p class="sheet__nombre" aria-hidden="true">4</p>
+    </article>
   </main>
 
   <footer class="colophon">
