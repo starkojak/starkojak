@@ -1,4 +1,5 @@
-// Verifies the contract address in content.js and that no other site file carries a copy.
+// Verifies the contract address in content.js, that the StarkLaunchy link points at the
+// same token, and that no other site file carries a copy.
 // Usage: node tools/check-ca.mjs
 import { readFileSync, readdirSync, statSync } from "node:fs";
 import { join } from "node:path";
@@ -11,6 +12,17 @@ let ok = ca === EXPECTED && ca.length === 66;
 console.log(`content.js CA: ${ca}`);
 console.log(`length: ${ca && ca.length} (expected 66), exact match: ${ca === EXPECTED}`);
 
+// Compare addresses without 0x, leading zeros or case.
+const norm = (a) => a.replace(/^0x/i, "").replace(/^0+/, "").toLowerCase();
+const u = src.match(/const STARKLAUNCHY_URL = "([^"]*)";/);
+const url = u && u[1];
+const t = url && url.match(/^https:\/\/starklaunchy\.fun\/token\/(0x[0-9a-fA-F]+)\?side=buy$/);
+const urlCa = t && t[1];
+const urlOk = !!(urlCa && ca && norm(urlCa) === norm(ca));
+if (!urlOk) ok = false;
+console.log(`StarkLaunchy URL: ${url}`);
+console.log(`StarkLaunchy token: ${urlCa}, matches CA: ${urlOk}`);
+
 const walk = (d) => readdirSync(d).flatMap((f) => {
   const p = join(d, f);
   if (f.startsWith(".") || f === "assets" || f === "tools" || f === "node_modules") return [];
@@ -20,6 +32,12 @@ for (const f of walk(".").filter((f) => /\.(html|js|css|json)$/.test(f))) {
   for (const hit of readFileSync(f, "utf8").match(/0x[0-9a-fA-F]{20,}/g) || []) {
     if (f !== "content.js") { ok = false; console.log(`stray address in ${f}: ${hit}`); }
   }
+}
+// content.js may hold the CA once and the StarkLaunchy URL once, nothing else.
+const inContent = src.match(/0x[0-9a-fA-F]{20,}/g) || [];
+if (inContent.length !== 2 || !inContent.includes(ca) || !inContent.includes(urlCa)) {
+  ok = false;
+  console.log(`unexpected addresses in content.js: ${inContent.join(", ")}`);
 }
 console.log(ok ? "OK" : "FAIL");
 process.exit(ok ? 0 : 1);

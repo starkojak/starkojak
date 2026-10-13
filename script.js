@@ -10,6 +10,10 @@
     el.textContent = STARKOJAK_CA.slice(0, 8) + "\u2026" + STARKOJAK_CA.slice(-6);
   });
 
+  document.querySelectorAll("[data-starklaunchy]").forEach(function (el) {
+    el.href = STARKLAUNCHY_URL;
+  });
+
   // Copy always copies the full address, whatever is shown on screen.
   function fallbackCopy(text) {
     var ta = document.createElement("textarea");
