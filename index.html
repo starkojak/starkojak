@@ -2,190 +2,297 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Starkojak — a meme coin on Starknet</title>
-  <meta name="description" content="Starkojak is a meme coin on Starknet, told as a short manga chapter.">
-  <meta name="theme-color" content="#e7ddd0">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Starkojak — the home of STARK, on Starknet</title>
+  <meta name="description" content="Starkojak is a meme coin on Starknet and the home of STARK, an anime world drawn in graphite and painted in colour.">
+  <meta name="theme-color" content="#0f1115">
   <link rel="canonical" href="https://starkojak.xyz/">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://starkojak.xyz/">
+  <meta property="og:site_name" content="Starkojak">
   <meta property="og:title" content="Starkojak">
-  <meta property="og:description" content="A meme coin on Starknet.">
-  <meta property="og:image" content="https://starkojak.xyz/assets/og-image.jpg">
-  <meta property="og:image:width" content="1024">
-  <meta property="og:image:height" content="1536">
-  <meta property="og:image:alt" content="Starkojak, eyes closed, a four-pointed star on the head.">
+  <meta property="og:description" content="The home of STARK, a quiet world waiting to be remembered. A meme coin on Starknet.">
+  <meta property="og:image" content="https://starkojak.xyz/assets/og/og-1200x630.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="The STARKOJAK wordmark under a painted stone chapel on a sea cliff at golden hour.">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://starkojak.xyz/assets/og-image.jpg">
+  <meta name="twitter:title" content="Starkojak">
+  <meta name="twitter:description" content="The home of STARK, a quiet world waiting to be remembered. A meme coin on Starknet.">
+  <meta name="twitter:image" content="https://starkojak.xyz/assets/og/og-1200x630.jpg">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Dela+Gothic+One&display=swap" rel="stylesheet">
+  <link rel="preload" href="fonts/dela-gothic-one-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/shippori-mincho-400-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="style.css">
   <script>document.documentElement.classList.add("js");</script>
+  <script src="content.js"></script>
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <header class="topbar">
-    <a class="topbar__brand" href="#top">Starkojak</a>
-    <nav class="topbar__nav" aria-label="Links">
-      <a class="topbar__link topbar__link--boxed topbar__link--wide" href="https://app.avnu.fi/en?sellToken=strk&amp;buyToken=starkojak" target="_blank" rel="noopener noreferrer">Buy on Avnu</a>
-      <a class="topbar__link topbar__link--boxed topbar__link--wide" data-starklaunchy target="_blank" rel="noopener noreferrer">Buy on StarkLaunchy</a>
-      <a class="topbar__link topbar__link--boxed topbar__link--narrow" href="#chapter-3">Buy</a>
-      <a class="topbar__link" href="https://x.com/Starkojak" target="_blank" rel="noopener noreferrer" aria-label="Starkojak on X">
+  <a class="skip" href="#prologue" data-c="skip">Skip to the story</a>
+
+  <header class="bar" data-bar>
+    <a class="bar__brand" href="#top" data-c="nav.brand">Starkojak</a>
+    <nav class="bar__nav" data-c-aria="nav.label" aria-label="Links">
+      <a class="bar__link bar__link--buy bar__link--wide" data-href="avnu" href="https://app.avnu.fi/en?sellToken=strk&amp;buyToken=starkojak" target="_blank" rel="noopener noreferrer" data-c="nav.avnu">Buy on Avnu</a>
+      <a class="bar__link bar__link--buy bar__link--wide" data-href="launchy" href="https://starklaunchy.fun/token/0x1576eb581192ad3b05c27836c4b324d89c6814cc3ab44f476507d58e6f77c45?side=buy" target="_blank" rel="noopener noreferrer" data-c="nav.launchy">Buy on StarkLaunchy</a>
+      <a class="bar__link bar__link--buy bar__link--narrow" href="#token" data-c="nav.buy">Buy</a>
+      <a class="bar__x" data-href="x" href="https://x.com/Starkojak" target="_blank" rel="noopener noreferrer" data-c-aria="nav.x" aria-label="Starkojak on X">
         <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M17.75 3h3.07l-6.7 7.66L22 21h-6.17l-4.83-6.32L5.47 21H2.4l7.17-8.2L2 3h6.33l4.37 5.77L17.75 3Zm-1.08 16.2h1.7L7.4 4.73H5.57L16.67 19.2Z"/></svg>
       </a>
     </nav>
   </header>
 
   <main id="top">
-    <!-- PAGE 1 -->
-    <article class="sheet" id="chapter-1" aria-labelledby="ch1-label">
-      <p class="sheet__tab" id="ch1-label">Chapter 1: The Dream</p>
 
-      <header class="splash">
-        <h1 class="splash__title" data-text="STARKOJAK">STARKOJAK</h1>
-        <p class="splash__tagline">A meme coin on Starknet.</p>
-      </header>
-
-      <div class="grid grid--p1">
-        <figure class="panel panel--wide snap">
-          <img src="assets/p1-wide.webp" width="1536" height="1024" fetchpriority="high"
-               alt="A hillside above a wide bay at sunset, three tall orange arrows standing in the brush.">
-          <figcaption class="caption caption--tl">Somewhere above the bay.</figcaption>
-        </figure>
-
-        <figure class="panel panel--face snap">
-          <img src="assets/p1-face.webp" width="1024" height="1536"
-               alt="Close-up of Starkojak's face, eyes shut, a four-pointed star on the head and two orange arrows behind.">
-        </figure>
-
-        <div class="cell cell--balloon snap">
-          <div class="panel panel--tone cut-below" aria-hidden="true"></div>
-          <p class="balloon balloon--face">I just woke up from a dream.<svg class="balloon__tail" viewBox="0 0 60 40" aria-hidden="true"><path d="M64 3 Q30 20 2 38 Q36 30 64 27 Z" fill="#f5f0e7"/><path d="M58 4 Q30 20 2 38 Q36 30 58 27" fill="none" stroke="#15130f" stroke-width="2.5" stroke-linejoin="round"/></svg></p>
-        </div>
-
-        <figure class="panel panel--star cut-above snap">
-          <img src="assets/p1-star.webp" width="1254" height="1254"
-               alt="Extreme close-up of the pale star on Starkojak's dark head.">
-        </figure>
+    <!-- 1 · HERO: the film, the wordmark, one line, the links -->
+    <section class="hero" aria-labelledby="hero-title" data-hero>
+      <div class="hero__media">
+        <picture>
+          <source media="(max-aspect-ratio: 3/4)" type="image/avif" srcset="assets/hero/poster-portrait-608.avif">
+          <source media="(max-aspect-ratio: 3/4)" type="image/webp" srcset="assets/hero/poster-portrait-608.webp">
+          <source type="image/avif" srcset="assets/hero/poster-960.avif 960w, assets/hero/poster-1280.avif 1280w, assets/hero/poster-1920.avif 1920w" sizes="100vw">
+          <img class="hero__poster" src="assets/hero/poster-1920.webp"
+               srcset="assets/hero/poster-960.webp 960w, assets/hero/poster-1280.webp 1280w, assets/hero/poster-1920.webp 1920w" sizes="100vw"
+               width="1920" height="1080" fetchpriority="high" decoding="async" data-c-alt="hero.alt" alt="A stone chapel on a sea cliff at golden hour, seen from the water.">
+        </picture>
+        <video class="hero__video" muted playsinline loop preload="none" disablepictureinpicture disableremoteplayback aria-hidden="true" tabindex="-1" data-hero-video></video>
+        <div class="hero__shade" aria-hidden="true"></div>
       </div>
-
-      <p class="sheet__nombre" aria-hidden="true">1</p>
-    </article>
-
-    <!-- PAGE 2 -->
-    <article class="sheet sheet--calm" id="chapter-2" aria-labelledby="ch2-label">
-      <p class="sheet__tab" id="ch2-label">Chapter 2: The Quiet Part</p>
-
-      <div class="grid grid--p2">
-        <figure class="panel panel--p2a snap">
-          <img src="assets/p2-a.webp" width="1536" height="1024" loading="lazy" decoding="async"
-               alt="Starkojak, small and seen from behind, sitting on a rock ledge above the bay as the sun sets.">
-          <figcaption class="caption caption--tl">Starkojak sat at the edge and waited for nothing in particular.</figcaption>
-        </figure>
-
-        <figure class="panel panel--p2b snap">
-          <img src="assets/p2-b.webp" width="1254" height="1254" loading="lazy" decoding="async"
-               alt="Starkojak lying low, one eye half open, watching a tiny orange arrow push up through the soil.">
-          <figcaption class="caption caption--br">Something small came up out of the ground.</figcaption>
-        </figure>
-
-        <figure class="panel panel--p2c snap">
-          <img src="assets/p2-c.webp" width="1024" height="1536" loading="lazy" decoding="async"
-               alt="Starkojak asleep in the foreground while dozens of orange arrows stand on the hill behind.">
-          <figcaption class="caption caption--tl">More followed. Starkojak went back to sleep.</figcaption>
-        </figure>
-
-        <figure class="panel panel--p2d snap">
-          <img src="assets/p2-d.webp" width="1536" height="1024" loading="lazy" decoding="async"
-               alt="Starkojak sitting cross-legged, eyes closed, in a field of orange arrows that runs to the horizon.">
-          <p class="balloon balloon--p2d">Is this still the dream?<svg class="balloon__tail" viewBox="0 0 60 40" aria-hidden="true"><path d="M64 3 Q30 20 2 38 Q36 30 64 27 Z" fill="#f5f0e7"/><path d="M58 4 Q30 20 2 38 Q36 30 58 27" fill="none" stroke="#15130f" stroke-width="2.5" stroke-linejoin="round"/></svg></p>
-        </figure>
-      </div>
-
-      <p class="sheet__nombre" aria-hidden="true">2</p>
-    </article>
-
-    <!-- PAGE 3 -->
-    <article class="sheet" id="chapter-3" aria-labelledby="ch3-label">
-      <p class="sheet__tab" id="ch3-label">Chapter 3: Finding Starkojak</p>
-
-      <div class="grid grid--p3">
-        <figure class="panel panel--step panel--p3a snap">
-          <img src="assets/p3-a.webp" width="1254" height="1254" loading="lazy" decoding="async"
-               alt="Starkojak looking down at a small black wallet held in both hands.">
-          <figcaption class="band">1. Get a Starknet wallet.</figcaption>
-        </figure>
-
-        <figure class="panel panel--step panel--p3b snap">
-          <img src="assets/p3-b.webp" width="1536" height="1024" loading="lazy" decoding="async"
-               alt="A finger resting on one of two coins, with curved arrows between them showing a swap.">
-          <figcaption class="band">2. Get some STRK and swap it on Avnu or StarkLaunchy.</figcaption>
-        </figure>
-
-        <div class="buy snap">
-          <a class="btn btn--avnu" href="https://app.avnu.fi/en?sellToken=strk&amp;buyToken=starkojak" target="_blank" rel="noopener noreferrer">Buy on Avnu</a>
-          <a class="btn btn--launchy" data-starklaunchy target="_blank" rel="noopener noreferrer">Buy on StarkLaunchy</a>
+      <div class="hero__content">
+        <h1 class="hero__title" id="hero-title"><span class="wordmark" data-c="hero.title">STARKOJAK</span></h1>
+        <p class="hero__line" data-c="hero.line">The home of STARK, a quiet world waiting to be remembered.</p>
+        <div class="hero__actions">
+          <a class="btn btn--paper" data-href="avnu" href="https://app.avnu.fi/en?sellToken=strk&amp;buyToken=starkojak" target="_blank" rel="noopener noreferrer"><span data-c="hero.avnu">Buy on Avnu</span></a>
+          <a class="btn btn--glass" data-href="launchy" href="https://starklaunchy.fun/token/0x1576eb581192ad3b05c27836c4b324d89c6814cc3ab44f476507d58e6f77c45?side=buy" target="_blank" rel="noopener noreferrer"><span data-c="hero.launchy">Buy on StarkLaunchy</span></a>
+          <a class="btn btn--glass btn--icon" data-href="x" href="https://x.com/Starkojak" target="_blank" rel="noopener noreferrer" data-c-aria="hero.x" aria-label="Starkojak on X">
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M17.75 3h3.07l-6.7 7.66L22 21h-6.17l-4.83-6.32L5.47 21H2.4l7.17-8.2L2 3h6.33l4.37 5.77L17.75 3Zm-1.08 16.2h1.7L7.4 4.73H5.57L16.67 19.2Z"/></svg>
+          </a>
         </div>
+      </div>
+      <button class="hero__pause" type="button" data-pause hidden>
+        <svg class="i-pause" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M4 2.5h2.6v11H4zm5.4 0H12v11H9.4z"/></svg>
+        <svg class="i-play" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M4.5 2.4 13 8l-8.5 5.6z"/></svg>
+      </button>
+      <a class="hero__cue" href="#prologue"><span data-c="hero.cue">Scroll</span><i aria-hidden="true"></i></a>
+    </section>
 
-        <figure class="panel panel--step panel--p3c snap">
-          <img src="assets/p3-c.webp" width="1254" height="1254" loading="lazy" decoding="async"
-               alt="Starkojak, eyes closed and smiling, holding up a coin with a four-pointed star on it.">
-          <figcaption class="band">3. Receive Starkojak.</figcaption>
+    <!-- 2 · PROLOGUE: graphite panels on paper -->
+    <section class="sheet sheet--prologue" id="prologue" aria-labelledby="prologue-tab">
+      <h2 class="tab" id="prologue-tab" data-c="prologue.tab">Prologue</h2>
+      <div class="page">
+        <figure class="panel panel--bay" data-reveal>
+          <picture>
+            <source type="image/avif" srcset="assets/prologue/bay-720.avif 720w, assets/prologue/bay-1200.avif 1200w, assets/prologue/bay-1536.avif 1536w" sizes="(max-width: 760px) 100vw, 1060px">
+            <img src="assets/prologue/bay-1200.webp" srcset="assets/prologue/bay-720.webp 720w, assets/prologue/bay-1200.webp 1200w, assets/prologue/bay-1536.webp 1536w"
+                 sizes="(max-width: 760px) 100vw, 1060px" width="1536" height="1024" loading="lazy" decoding="async" data-c-alt="prologue.panels.0.alt" alt="A small figure with a star on its head sits on a rock ledge above a wide bay at sunset, drawn in graphite." data-parallax>
+          </picture>
+          <figcaption class="cap cap--tl" data-c="prologue.panels.0.caption">Above the bay, a city no one remembers.</figcaption>
         </figure>
 
-        <section class="ca snap" aria-labelledby="ca-label">
-          <h2 class="ca__label" id="ca-label">Contract address</h2>
-          <div class="ca__row">
-            <code class="ca__value">
-              <span class="ca__full" data-ca></span>
-              <span class="ca__short" data-ca-short aria-hidden="true"></span>
-            </code>
-            <button class="btn btn--copy" type="button" data-copy>Copy</button>
+        <figure class="panel panel--eyes" data-reveal>
+          <picture>
+            <source type="image/avif" srcset="assets/prologue/eyes-720.avif 720w, assets/prologue/eyes-1024.avif 1024w" sizes="(max-width: 760px) 100vw, 700px">
+            <img src="assets/prologue/eyes-1024.webp" srcset="assets/prologue/eyes-720.webp 720w, assets/prologue/eyes-1024.webp 1024w"
+                 sizes="(max-width: 760px) 100vw, 700px" width="1024" height="520" loading="lazy" decoding="async" data-c-alt="prologue.panels.1.alt" alt="Close-up of Starkojak's closed eyes and the pale four-pointed star on the head, drawn in graphite." data-parallax>
+          </picture>
+          <figcaption class="cap cap--br" data-c="prologue.panels.1.caption">Sleep is long here, and waking is slow.</figcaption>
+        </figure>
+
+        <figure class="panel panel--star" data-reveal>
+          <picture>
+            <source type="image/avif" srcset="assets/prologue/star-480.avif 480w, assets/prologue/star-800.avif 800w" sizes="(max-width: 760px) 100vw, 350px">
+            <img src="assets/prologue/star-800.webp" srcset="assets/prologue/star-480.webp 480w, assets/prologue/star-800.webp 800w"
+                 sizes="(max-width: 760px) 100vw, 350px" width="800" height="800" loading="lazy" decoding="async" data-c-alt="prologue.panels.2.alt" alt="Extreme close-up of the pale star on Starkojak's dark head." data-parallax>
+          </picture>
+          <figcaption class="cap cap--bl" data-c="prologue.panels.2.caption">A mark older than memory.</figcaption>
+        </figure>
+
+        <figure class="panel panel--wake" data-reveal>
+          <picture>
+            <source type="image/avif" srcset="assets/prologue/wake-480.avif 480w, assets/prologue/wake-704.avif 704w" sizes="(max-width: 760px) 100vw, 440px">
+            <img src="assets/prologue/wake-704.webp" srcset="assets/prologue/wake-480.webp 480w, assets/prologue/wake-704.webp 704w"
+                 sizes="(max-width: 760px) 100vw, 440px" width="704" height="930" loading="lazy" decoding="async" data-c-alt="prologue.panels.3.alt" alt="Starkojak glancing sideways with one eye open, a streaked evening sky behind." data-parallax>
+          </picture>
+          <figcaption class="cap cap--tl" data-c="prologue.panels.3.caption">Half awake. Half remembering.</figcaption>
+        </figure>
+
+        <div class="panel panel--ink" data-reveal>
+          <p class="panel__line" data-c="prologue.closing">Nothing here is lost. Only forgotten.</p>
+          <span class="seal" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M16 3Q17.8 14.2 29 16Q17.8 17.8 16 29Q14.2 17.8 3 16Q14.2 14.2 16 3Z" fill="currentColor"/></svg></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3 · GRAPHITE TO COLOUR: the drawing on the page becomes the painted world -->
+    <section class="turn" id="graphite" aria-labelledby="turn-tab" data-turn>
+      <h2 class="tab turn__heading" id="turn-tab" data-c="turn.tab">Graphite &amp; colour</h2>
+      <p class="visually-hidden" data-c="turn.alt">As you scroll, a pencil drawing of the chapel on its cliff turns into the colour painting of the same view.</p>
+      <div class="turn__track">
+        <div class="turn__stage">
+          <span class="tab turn__tab" aria-hidden="true" data-c="turn.tab">Graphite &amp; colour</span>
+          <p class="turn__line turn__line--before" data-c="turn.before" data-turn-before>Every world begins in graphite.</p>
+          <div class="turn__frame" data-turn-frame>
+            <canvas class="turn__canvas" aria-hidden="true" data-turn-canvas></canvas>
+            <div class="turn__fallback" aria-hidden="true">
+              <img class="turn__img turn__img--graphite" alt="" decoding="async" data-turn-img="graphite">
+              <img class="turn__img turn__img--colour" alt="" decoding="async" data-turn-img="colour">
+            </div>
+            <div class="turn__dusk" aria-hidden="true" data-turn-dusk></div>
+            <span class="seal seal--frame" aria-hidden="true" data-turn-seal><svg viewBox="0 0 32 32"><path d="M16 3Q17.8 14.2 29 16Q17.8 17.8 16 29Q14.2 17.8 3 16Q14.2 14.2 16 3Z" fill="currentColor"/></svg></span>
           </div>
-          <p class="ca__note">Always check the contract address before you swap.</p>
-          <p class="visually-hidden" aria-live="polite" data-copy-status></p>
-        </section>
-      </div>
-
-      <p class="sheet__nombre" aria-hidden="true">3</p>
-    </article>
-
-    <!-- PAGE 4 -->
-    <article class="sheet sheet--final" id="chapter-4" aria-labelledby="ch4-label">
-      <p class="sheet__tab" id="ch4-label">Final Chapter</p>
-
-      <div class="grid grid--p4">
-        <figure class="panel panel--p4a snap">
-          <img src="assets/p4-a.webp" width="1536" height="1024" loading="lazy" decoding="async"
-               alt="A crowd of round-headed figures with stars on their heads, seen from behind, facing a large setting sun over the sea.">
-          <figcaption class="caption caption--tl">More showed up.</figcaption>
-        </figure>
-
-        <figure class="panel panel--p4b cut-right snap">
-          <img src="assets/p4-b.webp" width="958" height="1478" loading="lazy" decoding="async"
-               alt="Starkojak glancing sideways with one eye open, orange arrows and the bay behind.">
-        </figure>
-
-        <div class="panel panel--end cut-left snap">
-          <p class="end__line">To be continued.</p>
-          <a class="btn btn--x" href="https://x.com/Starkojak" target="_blank" rel="noopener noreferrer">Follow on X</a>
+          <p class="turn__line turn__line--after" data-c="turn.after" data-turn-after>Colour comes back the way memory does.</p>
         </div>
       </div>
+      <figure class="turn__still">
+        <div class="panel">
+          <picture>
+            <source type="image/avif" srcset="assets/graphite/split-1280.avif 1280w, assets/graphite/split-1920.avif 1920w" sizes="(max-width: 760px) 100vw, 1060px">
+            <img src="assets/graphite/split-1920.webp" srcset="assets/graphite/split-1280.webp 1280w, assets/graphite/split-1920.webp 1920w"
+                 sizes="(max-width: 760px) 100vw, 1060px" width="1920" height="1080" loading="lazy" decoding="async" data-c-alt="turn.stillAlt" alt="The chapel on its cliff, half pencil drawing and half colour painting.">
+          </picture>
+        </div>
+        <figcaption><span data-c="turn.before">Every world begins in graphite.</span> <span data-c="turn.after">Colour comes back the way memory does.</span></figcaption>
+      </figure>
+    </section>
 
-      <div class="fin" aria-hidden="true">
-        <svg viewBox="0 0 32 32" width="22" height="22"><path d="M16 1Q18 14 31 16Q18 18 16 31Q14 18 1 16Q14 14 16 1Z" fill="currentColor"/></svg>
+    <!-- 4 · THE WORLD: the chapel stills, large, drifting -->
+    <section class="world" id="world" aria-labelledby="world-tab">
+      <h2 class="tab tab--light world__tab" id="world-tab" data-c="world.tab">The world</h2>
+
+      <figure class="still still--wide" style="--fx: 34%" data-reveal>
+        <div class="still__img" data-parallax>
+          <picture>
+            <source type="image/avif" srcset="assets/world/coast-800.avif 800w, assets/world/coast-1280.avif 1280w, assets/world/coast-1920.avif 1920w" sizes="100vw">
+            <img src="assets/world/coast-1920.webp" srcset="assets/world/coast-800.webp 800w, assets/world/coast-1280.webp 1280w, assets/world/coast-1920.webp 1920w"
+                 sizes="100vw" width="1920" height="1080" loading="lazy" decoding="async" data-c-alt="world.items.0.alt" alt="The sea, three rock stacks and a ruined castle on an island, seen past the chapel's arched loggia.">
+          </picture>
+        </div>
+        <figcaption class="still__cap"><span class="still__label" data-c="world.items.0.label">The coast</span><span class="still__line" data-c="world.items.0.line">Across the water, the ruins keep their silence.</span></figcaption>
+      </figure>
+
+      <div class="diptych">
+        <figure class="still still--tall" data-reveal>
+          <div class="still__img" data-parallax>
+            <picture>
+              <source type="image/avif" srcset="assets/world/window-720.avif 720w, assets/world/window-1080.avif 1080w" sizes="(max-width: 760px) 100vw, 50vw">
+              <img src="assets/world/window-1080.webp" srcset="assets/world/window-720.webp 720w, assets/world/window-1080.webp 1080w"
+                   sizes="(max-width: 760px) 100vw, 50vw" width="1080" height="1440" loading="lazy" decoding="async" data-c-alt="world.items.1.alt" alt="The chapel's gable with a round window and a tall stained-glass window glowing amber.">
+            </picture>
+          </div>
+          <figcaption class="still__cap"><span class="still__label" data-c="world.items.1.label">The chapel</span><span class="still__line" data-c="world.items.1.line">Light stays longest in the old glass.</span></figcaption>
+        </figure>
+        <figure class="still still--tall" data-reveal>
+          <div class="still__img" data-parallax>
+            <picture>
+              <source type="image/avif" srcset="assets/world/stairs-540.avif 540w, assets/world/stairs-810.avif 810w" sizes="(max-width: 760px) 100vw, 50vw">
+              <img src="assets/world/stairs-810.webp" srcset="assets/world/stairs-540.webp 540w, assets/world/stairs-810.webp 810w"
+                   sizes="(max-width: 760px) 100vw, 50vw" width="810" height="1080" loading="lazy" decoding="async" data-c-alt="world.items.2.alt" alt="Worn stone stairs rising to a dark wooden door, red flowers in terracotta pots.">
+            </picture>
+          </div>
+          <figcaption class="still__cap"><span class="still__label" data-c="world.items.2.label">The stairs</span><span class="still__line" data-c="world.items.2.line">Flowers still bloom on the stairs.</span></figcaption>
+        </figure>
       </div>
 
-      <p class="sheet__nombre" aria-hidden="true">4</p>
-    </article>
+      <figure class="still still--wide" style="--fx: 50%" data-reveal>
+        <div class="still__img" data-parallax>
+          <picture>
+            <source type="image/avif" srcset="assets/world/bell-800.avif 800w, assets/world/bell-1280.avif 1280w, assets/world/bell-1920.avif 1920w" sizes="100vw">
+            <img src="assets/world/bell-1920.webp" srcset="assets/world/bell-800.webp 800w, assets/world/bell-1280.webp 1280w, assets/world/bell-1920.webp 1920w"
+                 sizes="100vw" width="1920" height="1080" loading="lazy" decoding="async" data-c-alt="world.items.3.alt" alt="An open stone belfry with a bronze bell under a slate dome, mountains and sea behind.">
+          </picture>
+        </div>
+        <figcaption class="still__cap"><span class="still__label" data-c="world.items.3.label">The bell</span><span class="still__line" data-c="world.items.3.line">Above it all, the bell and the wind.</span></figcaption>
+      </figure>
+    </section>
+
+    <!-- 5 · THE MAKING: blockout to final, scrubbed by the scroll -->
+    <section class="sheet sheet--making" id="making" aria-labelledby="making-tab" data-making>
+      <div class="making__track">
+        <div class="making__stage">
+          <h2 class="tab making__tab" id="making-tab" data-c="making.tab">The making</h2>
+          <header class="making__head">
+            <h3 class="making__title" data-c="making.title">From blockout to final</h3>
+            <p class="making__line" data-c="making.line">Built in Blender, entirely from code, one stage at a time.</p>
+          </header>
+          <div class="making__view">
+            <div class="panel making__frame">
+              <img class="making__img" src="assets/making/01-1600.webp" srcset="assets/making/01-960.webp 960w, assets/making/01-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 62vw" width="1600" height="900" loading="lazy" decoding="async" data-c-alt="making.alts.0" alt="The chapel's hero view as a blockout: plain grey clay shapes.">
+              <img class="making__img" src="assets/making/02-1600.webp" srcset="assets/making/02-960.webp 960w, assets/making/02-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 62vw" width="1600" height="900" loading="lazy" decoding="async" data-c-alt="making.alts.1" alt="The hero view with the architecture modelled in grey clay.">
+              <img class="making__img" src="assets/making/03-1600.webp" srcset="assets/making/03-960.webp 960w, assets/making/03-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 62vw" width="1600" height="900" loading="lazy" decoding="async" data-c-alt="making.alts.2" alt="The hero view with the stone, roof and wood materials added.">
+              <img class="making__img" src="assets/making/04-1600.webp" srcset="assets/making/04-960.webp 960w, assets/making/04-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 62vw" width="1600" height="900" loading="lazy" decoding="async" data-c-alt="making.alts.3" alt="The hero view with the cliffs and rocks sculpted under the chapel.">
+              <img class="making__img" src="assets/making/05-1600.webp" srcset="assets/making/05-960.webp 960w, assets/making/05-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 62vw" width="1600" height="900" loading="lazy" decoding="async" data-c-alt="making.alts.4" alt="The hero view with the painted look: golden light and soft colour.">
+              <img class="making__img" src="assets/making/06-1600.webp" srcset="assets/making/06-960.webp 960w, assets/making/06-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 62vw" width="1600" height="900" loading="lazy" decoding="async" data-c-alt="making.alts.5" alt="The hero view with cypresses, shrubs and grass added.">
+              <img class="making__img" src="assets/making/07-1600.webp" srcset="assets/making/07-960.webp 960w, assets/making/07-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 62vw" width="1600" height="900" loading="lazy" decoding="async" data-c-alt="making.alts.6" alt="The hero view with the sea, the distant land and a painted sky.">
+              <img class="making__img" src="assets/making/08-1600.webp" srcset="assets/making/08-960.webp 960w, assets/making/08-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 62vw" width="1600" height="900" loading="lazy" decoding="async" data-c-alt="making.alts.7" alt="The final hero view of the chapel on its cliff.">
+            </div>
+            <ol class="making__steps">
+              <li><span class="making__n">01</span> <span data-c="making.stages.0">Blockout</span></li>
+              <li><span class="making__n">02</span> <span data-c="making.stages.1">Architecture</span></li>
+              <li><span class="making__n">03</span> <span data-c="making.stages.2">Materials</span></li>
+              <li><span class="making__n">04</span> <span data-c="making.stages.3">Cliffs</span></li>
+              <li><span class="making__n">05</span> <span data-c="making.stages.4">Painted look</span></li>
+              <li><span class="making__n">06</span> <span data-c="making.stages.5">Vegetation</span></li>
+              <li><span class="making__n">07</span> <span data-c="making.stages.6">Sea and sky</span></li>
+              <li><span class="making__n">08</span> <span data-c="making.stages.7">Final</span></li>
+            </ol>
+            <p class="making__now" aria-hidden="true"><span class="making__n" data-making-n>01</span> <span data-making-label></span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6 · TOKEN: the address, the copy button, the links -->
+    <section class="sheet sheet--token" id="token" aria-labelledby="token-tab">
+      <h2 class="tab" id="token-tab" data-c="token.tab">Token</h2>
+      <div class="panel token" data-reveal>
+        <p class="token__name wordmark" data-c="token.title">Starkojak</p>
+        <p class="token__intro" data-c="token.intro">Starkojak is a meme coin on Starknet.</p>
+        <h3 class="token__label" id="ca-label" data-c="token.caLabel">Contract address</h3>
+        <div class="token__row">
+          <code class="token__ca" data-ca>0x01576Eb581192ad3b05C27836C4b324D89c6814Cc3Ab44F476507D58e6f77c45</code>
+          <button class="btn btn--ink token__copy" type="button" data-copy data-c-aria="token.copyLabel" aria-label="Copy the contract address"><span data-copy-text data-c="token.copy">Copy</span></button>
+        </div>
+        <p class="token__note" data-c="token.note">Always check the contract address before you swap.</p>
+        <p class="visually-hidden" aria-live="polite" data-copy-status></p>
+        <div class="token__actions">
+          <a class="btn btn--ink" data-href="avnu" href="https://app.avnu.fi/en?sellToken=strk&amp;buyToken=starkojak" target="_blank" rel="noopener noreferrer"><span data-c="token.avnu">Buy on Avnu</span></a>
+          <a class="btn btn--line" data-href="launchy" href="https://starklaunchy.fun/token/0x1576eb581192ad3b05c27836c4b324d89c6814cc3ab44f476507d58e6f77c45?side=buy" target="_blank" rel="noopener noreferrer"><span data-c="token.launchy">Buy on StarkLaunchy</span></a>
+          <a class="btn btn--line" data-href="x" href="https://x.com/Starkojak" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M17.75 3h3.07l-6.7 7.66L22 21h-6.17l-4.83-6.32L5.47 21H2.4l7.17-8.2L2 3h6.33l4.37 5.77L17.75 3Zm-1.08 16.2h1.7L7.4 4.73H5.57L16.67 19.2Z"/></svg>
+            <span data-c="token.x">Follow on X</span>
+          </a>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <footer class="colophon">
-    <p>Starkojak is a meme coin with no intrinsic value and no promise of return. Nothing here is financial advice. Do your own research.</p>
+  <!-- 7 · FOOTER -->
+  <footer class="foot">
+    <div class="foot__inner">
+      <a class="foot__x" data-href="x" href="https://x.com/Starkojak" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M17.75 3h3.07l-6.7 7.66L22 21h-6.17l-4.83-6.32L5.47 21H2.4l7.17-8.2L2 3h6.33l4.37 5.77L17.75 3Zm-1.08 16.2h1.7L7.4 4.73H5.57L16.67 19.2Z"/></svg>
+        <span data-c="footer.x">Follow Starkojak on X</span>
+      </a>
+      <p class="foot__disclaimer" data-c="footer.disclaimer">Starkojak is a meme coin with no intrinsic value or expectation of financial return. Nothing on this site is financial advice.</p>
+    </div>
   </footer>
 
-  <script src="content.js"></script>
-  <script src="script.js"></script>
+  <!-- The copy above is written from content.js by tools/prerender.mjs, so the page reads without JavaScript.
+       This fills the same values from content.js again before the first paint, so content.js always wins. -->
+  <script>
+    (function (c) {
+      function get(path) {
+        return path.split(".").reduce(function (o, k) { return o == null ? o : o[k]; }, c);
+      }
+      function each(sel, fn) { Array.prototype.forEach.call(document.querySelectorAll(sel), fn); }
+      each("[data-c]", function (el) { var v = get(el.getAttribute("data-c")); if (typeof v === "string") el.textContent = v; });
+      each("[data-c-alt]", function (el) { var v = get(el.getAttribute("data-c-alt")); if (typeof v === "string") el.alt = v; });
+      each("[data-c-aria]", function (el) { var v = get(el.getAttribute("data-c-aria")); if (typeof v === "string") el.setAttribute("aria-label", v); });
+      var links = { avnu: typeof AVNU_URL === "string" ? AVNU_URL : "", launchy: typeof STARKLAUNCHY_URL === "string" ? STARKLAUNCHY_URL : "", x: typeof X_URL === "string" ? X_URL : "" };
+      each("[data-href]", function (el) { var v = links[el.getAttribute("data-href")]; if (v) el.href = v; });
+      if (typeof STARKOJAK_CA === "string") each("[data-ca]", function (el) { el.textContent = STARKOJAK_CA; });
+    })(window.STARK_COPY || {});
+  </script>
 </body>
 </html>
