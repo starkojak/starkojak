@@ -1,4 +1,4 @@
-> **Superseded on the `redesign` branch.** The "Graphite and colour" redesign is described in `_redesign/plan.md`. This file describes the manga-chapter version that is live on `main`.
+> **Superseded.** The site is now the "Graphite and colour" redesign, described in `_redesign/plan.md`. This file describes the earlier manga-chapter version (`main` up to `bb1b056`).
 
 # Starkojak — design plan
 

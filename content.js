@@ -1,9 +1,11 @@
 /*
  * Every piece of copy on the page lives in this file, together with the contract address and the links.
- * Edit the text here; the layout (index.html, style.css) does not need to change.
+ * Edit the text here, then run `node tools/prerender.mjs`: it writes the same values into index.html, so the
+ * page reads without JavaScript. Nothing in index.html or style.css needs editing by hand.
  *
- * The four constants below are checked by tools/check-ca.mjs. Keep each on one line, exactly in this form.
- * The contract address is never typed anywhere else.
+ * The four constants below are checked by tools/check-ca.mjs, which also checks that index.html is up to date.
+ * Keep each on one line, exactly in this form. The contract address is never typed anywhere else: its copy
+ * in index.html is generated from this file.
  */
 const STARKOJAK_CA = "0x01576Eb581192ad3b05C27836C4b324D89c6814Cc3Ab44F476507D58e6f77c45";
 

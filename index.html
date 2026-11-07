@@ -29,16 +29,15 @@
   <script src="script.js" defer></script>
 </head>
 <body>
-  <a class="skip" href="#prologue" data-c="skip"></a>
-  <noscript><p class="noscript">Turn on JavaScript to read this page.</p></noscript>
+  <a class="skip" href="#prologue" data-c="skip">Skip to the story</a>
 
   <header class="bar" data-bar>
-    <a class="bar__brand" href="#top" data-c="nav.brand"></a>
-    <nav class="bar__nav" data-c-aria="nav.label">
-      <a class="bar__link bar__link--buy bar__link--wide" data-href="avnu" target="_blank" rel="noopener noreferrer" data-c="nav.avnu"></a>
-      <a class="bar__link bar__link--buy bar__link--wide" data-href="launchy" target="_blank" rel="noopener noreferrer" data-c="nav.launchy"></a>
-      <a class="bar__link bar__link--buy bar__link--narrow" href="#token" data-c="nav.buy"></a>
-      <a class="bar__x" data-href="x" target="_blank" rel="noopener noreferrer" data-c-aria="nav.x">
+    <a class="bar__brand" href="#top" data-c="nav.brand">Starkojak</a>
+    <nav class="bar__nav" data-c-aria="nav.label" aria-label="Links">
+      <a class="bar__link bar__link--buy bar__link--wide" data-href="avnu" href="https://app.avnu.fi/en?sellToken=strk&amp;buyToken=starkojak" target="_blank" rel="noopener noreferrer" data-c="nav.avnu">Buy on Avnu</a>
+      <a class="bar__link bar__link--buy bar__link--wide" data-href="launchy" href="https://starklaunchy.fun/token/0x1576eb581192ad3b05c27836c4b324d89c6814cc3ab44f476507d58e6f77c45?side=buy" target="_blank" rel="noopener noreferrer" data-c="nav.launchy">Buy on StarkLaunchy</a>
+      <a class="bar__link bar__link--buy bar__link--narrow" href="#token" data-c="nav.buy">Buy</a>
+      <a class="bar__x" data-href="x" href="https://x.com/Starkojak" target="_blank" rel="noopener noreferrer" data-c-aria="nav.x" aria-label="Starkojak on X">
         <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M17.75 3h3.07l-6.7 7.66L22 21h-6.17l-4.83-6.32L5.47 21H2.4l7.17-8.2L2 3h6.33l4.37 5.77L17.75 3Zm-1.08 16.2h1.7L7.4 4.73H5.57L16.67 19.2Z"/></svg>
       </a>
     </nav>
@@ -55,18 +54,18 @@
           <source type="image/avif" srcset="assets/hero/poster-960.avif 960w, assets/hero/poster-1280.avif 1280w, assets/hero/poster-1920.avif 1920w" sizes="100vw">
           <img class="hero__poster" src="assets/hero/poster-1920.webp"
                srcset="assets/hero/poster-960.webp 960w, assets/hero/poster-1280.webp 1280w, assets/hero/poster-1920.webp 1920w" sizes="100vw"
-               width="1920" height="1080" fetchpriority="high" decoding="async" data-c-alt="hero.alt" alt="">
+               width="1920" height="1080" fetchpriority="high" decoding="async" data-c-alt="hero.alt" alt="A stone chapel on a sea cliff at golden hour, seen from the water.">
         </picture>
         <video class="hero__video" muted playsinline loop preload="none" disablepictureinpicture disableremoteplayback aria-hidden="true" tabindex="-1" data-hero-video></video>
         <div class="hero__shade" aria-hidden="true"></div>
       </div>
       <div class="hero__content">
-        <h1 class="hero__title" id="hero-title"><span class="wordmark" data-c="hero.title"></span></h1>
-        <p class="hero__line" data-c="hero.line"></p>
+        <h1 class="hero__title" id="hero-title"><span class="wordmark" data-c="hero.title">STARKOJAK</span></h1>
+        <p class="hero__line" data-c="hero.line">The home of STARK, a quiet world waiting to be remembered.</p>
         <div class="hero__actions">
-          <a class="btn btn--paper" data-href="avnu" target="_blank" rel="noopener noreferrer"><span data-c="hero.avnu"></span></a>
-          <a class="btn btn--glass" data-href="launchy" target="_blank" rel="noopener noreferrer"><span data-c="hero.launchy"></span></a>
-          <a class="btn btn--glass btn--icon" data-href="x" target="_blank" rel="noopener noreferrer" data-c-aria="hero.x">
+          <a class="btn btn--paper" data-href="avnu" href="https://app.avnu.fi/en?sellToken=strk&amp;buyToken=starkojak" target="_blank" rel="noopener noreferrer"><span data-c="hero.avnu">Buy on Avnu</span></a>
+          <a class="btn btn--glass" data-href="launchy" href="https://starklaunchy.fun/token/0x1576eb581192ad3b05c27836c4b324d89c6814cc3ab44f476507d58e6f77c45?side=buy" target="_blank" rel="noopener noreferrer"><span data-c="hero.launchy">Buy on StarkLaunchy</span></a>
+          <a class="btn btn--glass btn--icon" data-href="x" href="https://x.com/Starkojak" target="_blank" rel="noopener noreferrer" data-c-aria="hero.x" aria-label="Starkojak on X">
             <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M17.75 3h3.07l-6.7 7.66L22 21h-6.17l-4.83-6.32L5.47 21H2.4l7.17-8.2L2 3h6.33l4.37 5.77L17.75 3Zm-1.08 16.2h1.7L7.4 4.73H5.57L16.67 19.2Z"/></svg>
           </a>
         </div>
@@ -75,51 +74,51 @@
         <svg class="i-pause" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M4 2.5h2.6v11H4zm5.4 0H12v11H9.4z"/></svg>
         <svg class="i-play" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M4.5 2.4 13 8l-8.5 5.6z"/></svg>
       </button>
-      <a class="hero__cue" href="#prologue"><span data-c="hero.cue"></span><i aria-hidden="true"></i></a>
+      <a class="hero__cue" href="#prologue"><span data-c="hero.cue">Scroll</span><i aria-hidden="true"></i></a>
     </section>
 
     <!-- 2 · PROLOGUE: graphite panels on paper -->
     <section class="sheet sheet--prologue" id="prologue" aria-labelledby="prologue-tab">
-      <h2 class="tab" id="prologue-tab" data-c="prologue.tab"></h2>
+      <h2 class="tab" id="prologue-tab" data-c="prologue.tab">Prologue</h2>
       <div class="page">
         <figure class="panel panel--bay" data-reveal>
           <picture>
             <source type="image/avif" srcset="assets/prologue/bay-720.avif 720w, assets/prologue/bay-1200.avif 1200w, assets/prologue/bay-1536.avif 1536w" sizes="(max-width: 760px) 100vw, 1060px">
             <img src="assets/prologue/bay-1200.webp" srcset="assets/prologue/bay-720.webp 720w, assets/prologue/bay-1200.webp 1200w, assets/prologue/bay-1536.webp 1536w"
-                 sizes="(max-width: 760px) 100vw, 1060px" width="1536" height="1024" loading="lazy" decoding="async" data-c-alt="prologue.panels.0.alt" alt="" data-parallax>
+                 sizes="(max-width: 760px) 100vw, 1060px" width="1536" height="1024" loading="lazy" decoding="async" data-c-alt="prologue.panels.0.alt" alt="A small figure with a star on its head sits on a rock ledge above a wide bay at sunset, drawn in graphite." data-parallax>
           </picture>
-          <figcaption class="cap cap--tl" data-c="prologue.panels.0.caption"></figcaption>
+          <figcaption class="cap cap--tl" data-c="prologue.panels.0.caption">Above the bay, a city no one remembers.</figcaption>
         </figure>
 
         <figure class="panel panel--eyes" data-reveal>
           <picture>
             <source type="image/avif" srcset="assets/prologue/eyes-720.avif 720w, assets/prologue/eyes-1024.avif 1024w" sizes="(max-width: 760px) 100vw, 700px">
             <img src="assets/prologue/eyes-1024.webp" srcset="assets/prologue/eyes-720.webp 720w, assets/prologue/eyes-1024.webp 1024w"
-                 sizes="(max-width: 760px) 100vw, 700px" width="1024" height="520" loading="lazy" decoding="async" data-c-alt="prologue.panels.1.alt" alt="" data-parallax>
+                 sizes="(max-width: 760px) 100vw, 700px" width="1024" height="520" loading="lazy" decoding="async" data-c-alt="prologue.panels.1.alt" alt="Close-up of Starkojak's closed eyes and the pale four-pointed star on the head, drawn in graphite." data-parallax>
           </picture>
-          <figcaption class="cap cap--br" data-c="prologue.panels.1.caption"></figcaption>
+          <figcaption class="cap cap--br" data-c="prologue.panels.1.caption">Sleep is long here, and waking is slow.</figcaption>
         </figure>
 
         <figure class="panel panel--star" data-reveal>
           <picture>
             <source type="image/avif" srcset="assets/prologue/star-480.avif 480w, assets/prologue/star-800.avif 800w" sizes="(max-width: 760px) 100vw, 350px">
             <img src="assets/prologue/star-800.webp" srcset="assets/prologue/star-480.webp 480w, assets/prologue/star-800.webp 800w"
-                 sizes="(max-width: 760px) 100vw, 350px" width="800" height="800" loading="lazy" decoding="async" data-c-alt="prologue.panels.2.alt" alt="" data-parallax>
+                 sizes="(max-width: 760px) 100vw, 350px" width="800" height="800" loading="lazy" decoding="async" data-c-alt="prologue.panels.2.alt" alt="Extreme close-up of the pale star on Starkojak's dark head." data-parallax>
           </picture>
-          <figcaption class="cap cap--bl" data-c="prologue.panels.2.caption"></figcaption>
+          <figcaption class="cap cap--bl" data-c="prologue.panels.2.caption">A mark older than memory.</figcaption>
         </figure>
 
         <figure class="panel panel--wake" data-reveal>
           <picture>
             <source type="image/avif" srcset="assets/prologue/wake-480.avif 480w, assets/prologue/wake-704.avif 704w" sizes="(max-width: 760px) 100vw, 440px">
             <img src="assets/prologue/wake-704.webp" srcset="assets/prologue/wake-480.webp 480w, assets/prologue/wake-704.webp 704w"
-                 sizes="(max-width: 760px) 100vw, 440px" width="704" height="930" loading="lazy" decoding="async" data-c-alt="prologue.panels.3.alt" alt="" data-parallax>
+                 sizes="(max-width: 760px) 100vw, 440px" width="704" height="930" loading="lazy" decoding="async" data-c-alt="prologue.panels.3.alt" alt="Starkojak glancing sideways with one eye open, a streaked evening sky behind." data-parallax>
           </picture>
-          <figcaption class="cap cap--tl" data-c="prologue.panels.3.caption"></figcaption>
+          <figcaption class="cap cap--tl" data-c="prologue.panels.3.caption">Half awake. Half remembering.</figcaption>
         </figure>
 
         <div class="panel panel--ink" data-reveal>
-          <p class="panel__line" data-c="prologue.closing"></p>
+          <p class="panel__line" data-c="prologue.closing">Nothing here is lost. Only forgotten.</p>
           <span class="seal" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M16 3Q17.8 14.2 29 16Q17.8 17.8 16 29Q14.2 17.8 3 16Q14.2 14.2 16 3Z" fill="currentColor"/></svg></span>
         </div>
       </div>
@@ -127,12 +126,12 @@
 
     <!-- 3 · GRAPHITE TO COLOUR: the drawing on the page becomes the painted world -->
     <section class="turn" id="graphite" aria-labelledby="turn-tab" data-turn>
-      <h2 class="tab turn__heading" id="turn-tab" data-c="turn.tab"></h2>
-      <p class="visually-hidden" data-c="turn.alt"></p>
+      <h2 class="tab turn__heading" id="turn-tab" data-c="turn.tab">Graphite &amp; colour</h2>
+      <p class="visually-hidden" data-c="turn.alt">As you scroll, a pencil drawing of the chapel on its cliff turns into the colour painting of the same view.</p>
       <div class="turn__track">
         <div class="turn__stage">
-          <span class="tab turn__tab" aria-hidden="true" data-c="turn.tab"></span>
-          <p class="turn__line turn__line--before" data-c="turn.before" data-turn-before></p>
+          <span class="tab turn__tab" aria-hidden="true" data-c="turn.tab">Graphite &amp; colour</span>
+          <p class="turn__line turn__line--before" data-c="turn.before" data-turn-before>Every world begins in graphite.</p>
           <div class="turn__frame" data-turn-frame>
             <canvas class="turn__canvas" aria-hidden="true" data-turn-canvas></canvas>
             <div class="turn__fallback" aria-hidden="true">
@@ -142,7 +141,7 @@
             <div class="turn__dusk" aria-hidden="true" data-turn-dusk></div>
             <span class="seal seal--frame" aria-hidden="true" data-turn-seal><svg viewBox="0 0 32 32"><path d="M16 3Q17.8 14.2 29 16Q17.8 17.8 16 29Q14.2 17.8 3 16Q14.2 14.2 16 3Z" fill="currentColor"/></svg></span>
           </div>
-          <p class="turn__line turn__line--after" data-c="turn.after" data-turn-after></p>
+          <p class="turn__line turn__line--after" data-c="turn.after" data-turn-after>Colour comes back the way memory does.</p>
         </div>
       </div>
       <figure class="turn__still">
@@ -150,26 +149,26 @@
           <picture>
             <source type="image/avif" srcset="assets/graphite/split-1280.avif 1280w, assets/graphite/split-1920.avif 1920w" sizes="(max-width: 760px) 100vw, 1060px">
             <img src="assets/graphite/split-1920.webp" srcset="assets/graphite/split-1280.webp 1280w, assets/graphite/split-1920.webp 1920w"
-                 sizes="(max-width: 760px) 100vw, 1060px" width="1920" height="1080" loading="lazy" decoding="async" data-c-alt="turn.stillAlt" alt="">
+                 sizes="(max-width: 760px) 100vw, 1060px" width="1920" height="1080" loading="lazy" decoding="async" data-c-alt="turn.stillAlt" alt="The chapel on its cliff, half pencil drawing and half colour painting.">
           </picture>
         </div>
-        <figcaption><span data-c="turn.before"></span> <span data-c="turn.after"></span></figcaption>
+        <figcaption><span data-c="turn.before">Every world begins in graphite.</span> <span data-c="turn.after">Colour comes back the way memory does.</span></figcaption>
       </figure>
     </section>
 
     <!-- 4 · THE WORLD: the chapel stills, large, drifting -->
     <section class="world" id="world" aria-labelledby="world-tab">
-      <h2 class="tab tab--light world__tab" id="world-tab" data-c="world.tab"></h2>
+      <h2 class="tab tab--light world__tab" id="world-tab" data-c="world.tab">The world</h2>
 
       <figure class="still still--wide" style="--fx: 34%" data-reveal>
         <div class="still__img" data-parallax>
           <picture>
             <source type="image/avif" srcset="assets/world/coast-800.avif 800w, assets/world/coast-1280.avif 1280w, assets/world/coast-1920.avif 1920w" sizes="100vw">
             <img src="assets/world/coast-1920.webp" srcset="assets/world/coast-800.webp 800w, assets/world/coast-1280.webp 1280w, assets/world/coast-1920.webp 1920w"
-                 sizes="100vw" width="1920" height="1080" loading="lazy" decoding="async" data-c-alt="world.items.0.alt" alt="">
+                 sizes="100vw" width="1920" height="1080" loading="lazy" decoding="async" data-c-alt="world.items.0.alt" alt="The sea, three rock stacks and a ruined castle on an island, seen past the chapel's arched loggia.">
           </picture>
         </div>
-        <figcaption class="still__cap"><span class="still__label" data-c="world.items.0.label"></span><span class="still__line" data-c="world.items.0.line"></span></figcaption>
+        <figcaption class="still__cap"><span class="still__label" data-c="world.items.0.label">The coast</span><span class="still__line" data-c="world.items.0.line">Across the water, the ruins keep their silence.</span></figcaption>
       </figure>
 
       <div class="diptych">
@@ -178,20 +177,20 @@
             <picture>
               <source type="image/avif" srcset="assets/world/window-720.avif 720w, assets/world/window-1080.avif 1080w" sizes="(max-width: 760px) 100vw, 50vw">
               <img src="assets/world/window-1080.webp" srcset="assets/world/window-720.webp 720w, assets/world/window-1080.webp 1080w"
-                   sizes="(max-width: 760px) 100vw, 50vw" width="1080" height="1440" loading="lazy" decoding="async" data-c-alt="world.items.1.alt" alt="">
+                   sizes="(max-width: 760px) 100vw, 50vw" width="1080" height="1440" loading="lazy" decoding="async" data-c-alt="world.items.1.alt" alt="The chapel's gable with a round window and a tall stained-glass window glowing amber.">
             </picture>
           </div>
-          <figcaption class="still__cap"><span class="still__label" data-c="world.items.1.label"></span><span class="still__line" data-c="world.items.1.line"></span></figcaption>
+          <figcaption class="still__cap"><span class="still__label" data-c="world.items.1.label">The chapel</span><span class="still__line" data-c="world.items.1.line">Light stays longest in the old glass.</span></figcaption>
         </figure>
         <figure class="still still--tall" data-reveal>
           <div class="still__img" data-parallax>
             <picture>
               <source type="image/avif" srcset="assets/world/stairs-540.avif 540w, assets/world/stairs-810.avif 810w" sizes="(max-width: 760px) 100vw, 50vw">
               <img src="assets/world/stairs-810.webp" srcset="assets/world/stairs-540.webp 540w, assets/world/stairs-810.webp 810w"
-                   sizes="(max-width: 760px) 100vw, 50vw" width="810" height="1080" loading="lazy" decoding="async" data-c-alt="world.items.2.alt" alt="">
+                   sizes="(max-width: 760px) 100vw, 50vw" width="810" height="1080" loading="lazy" decoding="async" data-c-alt="world.items.2.alt" alt="Worn stone stairs rising to a dark wooden door, red flowers in terracotta pots.">
             </picture>
           </div>
-          <figcaption class="still__cap"><span class="still__label" data-c="world.items.2.label"></span><span class="still__line" data-c="world.items.2.line"></span></figcaption>
+          <figcaption class="still__cap"><span class="still__label" data-c="world.items.2.label">The stairs</span><span class="still__line" data-c="world.items.2.line">Flowers still bloom on the stairs.</span></figcaption>
         </figure>
       </div>
 
@@ -200,10 +199,10 @@
           <picture>
             <source type="image/avif" srcset="assets/world/bell-800.avif 800w, assets/world/bell-1280.avif 1280w, assets/world/bell-1920.avif 1920w" sizes="100vw">
             <img src="assets/world/bell-1920.webp" srcset="assets/world/bell-800.webp 800w, assets/world/bell-1280.webp 1280w, assets/world/bell-1920.webp 1920w"
-                 sizes="100vw" width="1920" height="1080" loading="lazy" decoding="async" data-c-alt="world.items.3.alt" alt="">
+                 sizes="100vw" width="1920" height="1080" loading="lazy" decoding="async" data-c-alt="world.items.3.alt" alt="An open stone belfry with a bronze bell under a slate dome, mountains and sea behind.">
           </picture>
         </div>
-        <figcaption class="still__cap"><span class="still__label" data-c="world.items.3.label"></span><span class="still__line" data-c="world.items.3.line"></span></figcaption>
+        <figcaption class="still__cap"><span class="still__label" data-c="world.items.3.label">The bell</span><span class="still__line" data-c="world.items.3.line">Above it all, the bell and the wind.</span></figcaption>
       </figure>
     </section>
 
@@ -211,31 +210,31 @@
     <section class="sheet sheet--making" id="making" aria-labelledby="making-tab" data-making>
       <div class="making__track">
         <div class="making__stage">
-          <h2 class="tab making__tab" id="making-tab" data-c="making.tab"></h2>
+          <h2 class="tab making__tab" id="making-tab" data-c="making.tab">The making</h2>
           <header class="making__head">
-            <h3 class="making__title" data-c="making.title"></h3>
-            <p class="making__line" data-c="making.line"></p>
+            <h3 class="making__title" data-c="making.title">From blockout to final</h3>
+            <p class="making__line" data-c="making.line">Built in Blender, entirely from code, one stage at a time.</p>
           </header>
           <div class="making__view">
             <div class="panel making__frame">
-              <img class="making__img" src="assets/making/01-1600.webp" srcset="assets/making/01-960.webp 960w, assets/making/01-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 62vw" width="1600" height="900" loading="lazy" decoding="async" data-c-alt="making.alts.0" alt="">
-              <img class="making__img" src="assets/making/02-1600.webp" srcset="assets/making/02-960.webp 960w, assets/making/02-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 62vw" width="1600" height="900" loading="lazy" decoding="async" data-c-alt="making.alts.1" alt="">
-              <img class="making__img" src="assets/making/03-1600.webp" srcset="assets/making/03-960.webp 960w, assets/making/03-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 62vw" width="1600" height="900" loading="lazy" decoding="async" data-c-alt="making.alts.2" alt="">
-              <img class="making__img" src="assets/making/04-1600.webp" srcset="assets/making/04-960.webp 960w, assets/making/04-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 62vw" width="1600" height="900" loading="lazy" decoding="async" data-c-alt="making.alts.3" alt="">
-              <img class="making__img" src="assets/making/05-1600.webp" srcset="assets/making/05-960.webp 960w, assets/making/05-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 62vw" width="1600" height="900" loading="lazy" decoding="async" data-c-alt="making.alts.4" alt="">
-              <img class="making__img" src="assets/making/06-1600.webp" srcset="assets/making/06-960.webp 960w, assets/making/06-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 62vw" width="1600" height="900" loading="lazy" decoding="async" data-c-alt="making.alts.5" alt="">
-              <img class="making__img" src="assets/making/07-1600.webp" srcset="assets/making/07-960.webp 960w, assets/making/07-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 62vw" width="1600" height="900" loading="lazy" decoding="async" data-c-alt="making.alts.6" alt="">
-              <img class="making__img" src="assets/making/08-1600.webp" srcset="assets/making/08-960.webp 960w, assets/making/08-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 62vw" width="1600" height="900" loading="lazy" decoding="async" data-c-alt="making.alts.7" alt="">
+              <img class="making__img" src="assets/making/01-1600.webp" srcset="assets/making/01-960.webp 960w, assets/making/01-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 62vw" width="1600" height="900" loading="lazy" decoding="async" data-c-alt="making.alts.0" alt="The chapel's hero view as a blockout: plain grey clay shapes.">
+              <img class="making__img" src="assets/making/02-1600.webp" srcset="assets/making/02-960.webp 960w, assets/making/02-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 62vw" width="1600" height="900" loading="lazy" decoding="async" data-c-alt="making.alts.1" alt="The hero view with the architecture modelled in grey clay.">
+              <img class="making__img" src="assets/making/03-1600.webp" srcset="assets/making/03-960.webp 960w, assets/making/03-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 62vw" width="1600" height="900" loading="lazy" decoding="async" data-c-alt="making.alts.2" alt="The hero view with the stone, roof and wood materials added.">
+              <img class="making__img" src="assets/making/04-1600.webp" srcset="assets/making/04-960.webp 960w, assets/making/04-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 62vw" width="1600" height="900" loading="lazy" decoding="async" data-c-alt="making.alts.3" alt="The hero view with the cliffs and rocks sculpted under the chapel.">
+              <img class="making__img" src="assets/making/05-1600.webp" srcset="assets/making/05-960.webp 960w, assets/making/05-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 62vw" width="1600" height="900" loading="lazy" decoding="async" data-c-alt="making.alts.4" alt="The hero view with the painted look: golden light and soft colour.">
+              <img class="making__img" src="assets/making/06-1600.webp" srcset="assets/making/06-960.webp 960w, assets/making/06-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 62vw" width="1600" height="900" loading="lazy" decoding="async" data-c-alt="making.alts.5" alt="The hero view with cypresses, shrubs and grass added.">
+              <img class="making__img" src="assets/making/07-1600.webp" srcset="assets/making/07-960.webp 960w, assets/making/07-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 62vw" width="1600" height="900" loading="lazy" decoding="async" data-c-alt="making.alts.6" alt="The hero view with the sea, the distant land and a painted sky.">
+              <img class="making__img" src="assets/making/08-1600.webp" srcset="assets/making/08-960.webp 960w, assets/making/08-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 62vw" width="1600" height="900" loading="lazy" decoding="async" data-c-alt="making.alts.7" alt="The final hero view of the chapel on its cliff.">
             </div>
             <ol class="making__steps">
-              <li><span class="making__n">01</span> <span data-c="making.stages.0"></span></li>
-              <li><span class="making__n">02</span> <span data-c="making.stages.1"></span></li>
-              <li><span class="making__n">03</span> <span data-c="making.stages.2"></span></li>
-              <li><span class="making__n">04</span> <span data-c="making.stages.3"></span></li>
-              <li><span class="making__n">05</span> <span data-c="making.stages.4"></span></li>
-              <li><span class="making__n">06</span> <span data-c="making.stages.5"></span></li>
-              <li><span class="making__n">07</span> <span data-c="making.stages.6"></span></li>
-              <li><span class="making__n">08</span> <span data-c="making.stages.7"></span></li>
+              <li><span class="making__n">01</span> <span data-c="making.stages.0">Blockout</span></li>
+              <li><span class="making__n">02</span> <span data-c="making.stages.1">Architecture</span></li>
+              <li><span class="making__n">03</span> <span data-c="making.stages.2">Materials</span></li>
+              <li><span class="making__n">04</span> <span data-c="making.stages.3">Cliffs</span></li>
+              <li><span class="making__n">05</span> <span data-c="making.stages.4">Painted look</span></li>
+              <li><span class="making__n">06</span> <span data-c="making.stages.5">Vegetation</span></li>
+              <li><span class="making__n">07</span> <span data-c="making.stages.6">Sea and sky</span></li>
+              <li><span class="making__n">08</span> <span data-c="making.stages.7">Final</span></li>
             </ol>
             <p class="making__now" aria-hidden="true"><span class="making__n" data-making-n>01</span> <span data-making-label></span></p>
           </div>
@@ -245,23 +244,23 @@
 
     <!-- 6 · TOKEN: the address, the copy button, the links -->
     <section class="sheet sheet--token" id="token" aria-labelledby="token-tab">
-      <h2 class="tab" id="token-tab" data-c="token.tab"></h2>
+      <h2 class="tab" id="token-tab" data-c="token.tab">Token</h2>
       <div class="panel token" data-reveal>
-        <p class="token__name wordmark" data-c="token.title"></p>
-        <p class="token__intro" data-c="token.intro"></p>
-        <h3 class="token__label" id="ca-label" data-c="token.caLabel"></h3>
+        <p class="token__name wordmark" data-c="token.title">Starkojak</p>
+        <p class="token__intro" data-c="token.intro">Starkojak is a meme coin on Starknet.</p>
+        <h3 class="token__label" id="ca-label" data-c="token.caLabel">Contract address</h3>
         <div class="token__row">
-          <code class="token__ca" data-ca></code>
-          <button class="btn btn--ink token__copy" type="button" data-copy data-c-aria="token.copyLabel"><span data-copy-text data-c="token.copy"></span></button>
+          <code class="token__ca" data-ca>0x01576Eb581192ad3b05C27836C4b324D89c6814Cc3Ab44F476507D58e6f77c45</code>
+          <button class="btn btn--ink token__copy" type="button" data-copy data-c-aria="token.copyLabel" aria-label="Copy the contract address"><span data-copy-text data-c="token.copy">Copy</span></button>
         </div>
-        <p class="token__note" data-c="token.note"></p>
+        <p class="token__note" data-c="token.note">Always check the contract address before you swap.</p>
         <p class="visually-hidden" aria-live="polite" data-copy-status></p>
         <div class="token__actions">
-          <a class="btn btn--ink" data-href="avnu" target="_blank" rel="noopener noreferrer"><span data-c="token.avnu"></span></a>
-          <a class="btn btn--line" data-href="launchy" target="_blank" rel="noopener noreferrer"><span data-c="token.launchy"></span></a>
-          <a class="btn btn--line" data-href="x" target="_blank" rel="noopener noreferrer">
+          <a class="btn btn--ink" data-href="avnu" href="https://app.avnu.fi/en?sellToken=strk&amp;buyToken=starkojak" target="_blank" rel="noopener noreferrer"><span data-c="token.avnu">Buy on Avnu</span></a>
+          <a class="btn btn--line" data-href="launchy" href="https://starklaunchy.fun/token/0x1576eb581192ad3b05c27836c4b324d89c6814cc3ab44f476507d58e6f77c45?side=buy" target="_blank" rel="noopener noreferrer"><span data-c="token.launchy">Buy on StarkLaunchy</span></a>
+          <a class="btn btn--line" data-href="x" href="https://x.com/Starkojak" target="_blank" rel="noopener noreferrer">
             <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M17.75 3h3.07l-6.7 7.66L22 21h-6.17l-4.83-6.32L5.47 21H2.4l7.17-8.2L2 3h6.33l4.37 5.77L17.75 3Zm-1.08 16.2h1.7L7.4 4.73H5.57L16.67 19.2Z"/></svg>
-            <span data-c="token.x"></span>
+            <span data-c="token.x">Follow on X</span>
           </a>
         </div>
       </div>
@@ -271,15 +270,16 @@
   <!-- 7 · FOOTER -->
   <footer class="foot">
     <div class="foot__inner">
-      <a class="foot__x" data-href="x" target="_blank" rel="noopener noreferrer">
+      <a class="foot__x" data-href="x" href="https://x.com/Starkojak" target="_blank" rel="noopener noreferrer">
         <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M17.75 3h3.07l-6.7 7.66L22 21h-6.17l-4.83-6.32L5.47 21H2.4l7.17-8.2L2 3h6.33l4.37 5.77L17.75 3Zm-1.08 16.2h1.7L7.4 4.73H5.57L16.67 19.2Z"/></svg>
-        <span data-c="footer.x"></span>
+        <span data-c="footer.x">Follow Starkojak on X</span>
       </a>
-      <p class="foot__disclaimer" data-c="footer.disclaimer"></p>
+      <p class="foot__disclaimer" data-c="footer.disclaimer">Starkojak is a meme coin with no intrinsic value or expectation of financial return. Nothing on this site is financial advice.</p>
     </div>
   </footer>
 
-  <!-- Fill every piece of copy from content.js before the first paint. -->
+  <!-- The copy above is written from content.js by tools/prerender.mjs, so the page reads without JavaScript.
+       This fills the same values from content.js again before the first paint, so content.js always wins. -->
   <script>
     (function (c) {
       function get(path) {

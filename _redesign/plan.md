@@ -69,12 +69,13 @@ Motion follows the normal scroll. Nothing holds or steers the scroll position; t
   - No film (the poster stays) and no arrivals, drift or parallax.
   - The transition becomes one baked still, half pencil and half paint, with both lines.
   - The making becomes a static 4 × 2 grid (2 × 4 on phones).
-  - With no JavaScript, the same still and grid are shown, but the copy (which comes from `content.js`) is missing. A one-line notice asks the visitor to turn JavaScript on.
+  - With no JavaScript, the same still and grid are shown, and every line of copy, the links and the address are there (see Copy below). The top bar stays over the hero instead of following the page, and the copy button is hidden, because it needs the script; the address still selects in one tap. Screenshots: `after/nojs/`.
 
 ## Copy
 
 - **Where it lives:** every visible line, alt text and label is in `content.js` (`window.STARK_COPY`), next to the contract address and the three links. The layout reads it through `data-c`, `data-c-alt`, `data-c-aria` and `data-href` attributes. A small inline script at the end of `index.html` fills it in before the first paint, so there is no flash and no layout shift.
-- **What stays in the HTML:** the `<head>` metadata (title, description, Open Graph) is static, because link previews do not run scripts. So is the one-line noscript notice.
+- **Without JavaScript:** `tools/prerender.mjs` writes the same values from `content.js` into `index.html` itself, so the page reads without a script. `content.js` stays the only place to edit: after editing it, run `node tools/prerender.mjs`. `node tools/check-ca.mjs` fails if `index.html` is out of date.
+- **Written by hand in the HTML:** only the `<head>` metadata (title, description, Open Graph), which link previews read without running scripts.
 - **Tone:** the lines are atmosphere only, never plot events: a city in ruins, waking, lost memory, a quiet world waiting to be remembered. There is no hype, no prices and no promises.
 
 ## Assets: what was made and how
@@ -132,7 +133,7 @@ All of these are re-encoded from the masters in `assets/originals`.
 
 ## Technical notes
 
-- There is still no build step. Vercel serves the repo root as static files, as it does now.
+- There is still no build step on Vercel. Vercel serves the repo root as static files, as it does now. `tools/prerender.mjs` runs locally and its output (`index.html`) is committed.
 - **Files:**
   - `index.html`: structure only.
   - `style.css`
@@ -140,7 +141,8 @@ All of these are re-encoded from the masters in `assets/originals`.
   - `content.js`: copy, the address, the links.
   - `fonts/`
   - `assets/{hero,prologue,graphite,world,making,og}/`
-- **`tools/check-ca.mjs`:** now also checks the Avnu and X links exactly. It still checks that the address appears only in `content.js`. Run `node tools/check-ca.mjs` and it prints `OK`.
+- **`tools/check-ca.mjs`:** now also checks the Avnu and X links exactly. It checks that `index.html` holds exactly what `tools/prerender.mjs` writes from `content.js` (the address, byte for byte, and the StarkLaunchy token), and that no other file carries the address. Run `node tools/check-ca.mjs` and it prints `OK`.
+- **`tools/prerender.mjs`:** writes the copy, alt texts, labels, links and the address from `content.js` into `index.html` (`--check` only reports). Node built-ins only.
 - **`.vercelignore`:** now also excludes `_redesign/` (these notes, the screenshots and the Lighthouse reports), so they stay in git and off the website.
 - **Rebuilding the assets:**
   1. Run `graphite.py`, then `hero_loop.py`, then `encode_hero.sh`.
