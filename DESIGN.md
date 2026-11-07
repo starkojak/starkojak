@@ -1,3 +1,5 @@
+> **Superseded on the `redesign` branch.** The "Graphite and colour" redesign is described in `_redesign/plan.md`. This file describes the manga-chapter version that is live on `main`.
+
 # Starkojak — design plan
 
 A single vertical page that reads like a four-page chapter of a quiet seinen manga,
